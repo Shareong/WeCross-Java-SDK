@@ -57,8 +57,7 @@ before_install:
 addons:
     sonarcloud:
         organization: "shareong"
-        token: "r6bx+eZbP9oznk3lRi2RuqlOQK/yW2ULnPZbXomKWkvcak1c1uqJUj17aY3Z5BIeVdd8YvSQvUG7PTtHVUuI9KM9ckncTer7FP591zPo2LjHAobqj6Kj9V9hs1mW34mxdkNNXDVbSapPr0WooOpskcKgqt8bM3xyJjvIyAYCQBBSsNBYzxU86XjYsKnuxlB8L3yzCyi/YTd0z2au4+CBxX0EJf8sHJgvYRIOCs50tmguaPM+M3MHkz5pDGLL1lipcZcA32ooUDQsXnjcycWbwTpGry2ZU0n4bQp9Pthd1+aHum8nOaRKMgxfw/aSSbycePCiRQavMhwN8y/U1i3GOmfcoc/XSV2GrN57Otlce12NugWozBV8zNUslS1OZ4MezMhgqiFiwht0/HQtNQnYzSZvPrK8ZetQKpSFfCIUGDw3UN7P6YTFdjT1OrOdjFNSOnhqi8YUd5ORPlx926ZnO4tqa+EpbR1hiPGpeD4TbhbvgPgTu1GFhCwTUbrAmjRvHLYX/KM0kmWvxotFvVV+XM7LYgkCBQPZXC5rY/ftj6N0zS6pWpFcZHUNOEWIFdF5uReNrEUzxZWl1RAxjtzGmJGCrSKmEYaN/s2Ur4lPI2y/cYm6aQZqEn/vDvNPb3kKFalnI+ussV5iLWvBDDsGzaOKC+l9SaorIVuYCA10fOk="
-
+        token: "Sonar-Scanner"
 script: |
     sonar-scanner && bash .ci/ci_check.sh
 
