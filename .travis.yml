@@ -60,7 +60,7 @@ addons:
         token:
             secure: "NFi4an8KLTOwiXvOUOXqF59zuRenKUqXXRLzgjrc78+rEJAykZst7gSdg6wTsHMpWquKkxcCYjEdO/3fxbQTa1+engsSNRhdjAe8TgNM9nuKLVD1XKojUuvXP3VeqaOy8opdRBQkV8RPQUuWqcCMEBRg7iNEz8h2HPTP/x+uOEQFOYCfRKt3Nq1HyRXJa7agqoDdW8RimKobeEl5EvPVunVMtYmpEWLu42Q5KnRFR2oCspj1jrDUBjzauc3biz0nYqspX2mmdi8apZ57C0306VeYHMtoBNXNRktKsc03AMvkXWYKXu9hIqMqYXHBPPzjOAg8H1DY+nLkK3rleg6jl84eAjMrZrk8S4mL2eaULCFh0bf+KA0STsQF8azvCgjnwZWNKuE8kZ+mypgF0yZBnpgEzWM0VCuHSddpUrPL2Cq6GPbf1SbZtrriBKEL72gqs2C4iEelL5LQVDgOtsn1DHQALEbNnUjDM3Uvf2+Nr3s3CxhEUONx7oH+OHZGavd77iRpHcS18/fSmjFGkiTCMa/N6quR5arSP1Us148nWM8hoNau1ARsdrzpZ9YNZ4his8gPx8t+Tgnp3sfxSR6EJz4ohFkwtx9/OWB3MJnKYCPPCFz3S6ea9+S/q2/03axU32iYdDpgkjZth2GexXWApQQhvRnH/GXOfmfSLArfQ8Q="
 script: |
-    sonar-scanner && bash .ci/ci_check.sh
+    ./gradlew sonarqube && bash .ci/ci_check.sh
 
 
 after_success:
