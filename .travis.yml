@@ -53,8 +53,16 @@ cache:
         - $HOME/.gradle/wrapper/
 before_install:
     - gradle wrapper
+
+addons:
+    sonarcloud:
+        organization: "shareong"
+        token:
+            secure: "ibAMOyMoAdFKPozXKw/pYj22DGEmEr4ho9y0OH4X6y/L9V8g0pin89if2dnbaZeG0EWAN+Qhjl7qchebFrNczZiRx29N/6peAMBP97RIyOihrUTWSYXJDplO914U5CXofqNIHXNl6HtyCjry2LajoysETiWJbOcXgJPYMnDoE2K+jHdQJS//2oVYr7UO2fup9ujOMu6TwDTV8armsFUxaFNDt+/8igxmVl4B2QvaX6JepxwJ1UpEi3LqBY4z3qGjEOqa3o0h/x/QexhlUCpw6E1ueJZSpx6fkr/PYFyBjLs7O6Qsltc/m1B3X59RlLX5Pfr7pIj8m9j+4t+vOFFpzC+hsU2vI5QRzyHB/MrS9Pe6qfNTqP308fz2JdKNQLe5rEHmj8aUJR2SiwUhvF51LVZ4vfFoKnpa3w3elIbQWtzzIw0Nt4X7qyisuux1bQ4eJiIbb4OBo9FH8R6e2fiQzTLy8GynX4EvUleqk1BnBsMkdsAYs1XCTP1R4A6FUGaDYMIdl16CMszUtLdwK5x8NXVLZcTemZ8QzifNskbcjKYE4TesRS1yP7RpCA0HPixilkuyB5Isqdb1oyl5ceq6eVuzzAxm099aUNYxqxWnQgEgeaPlLqxv7Xhuc/j8f5HbnEUzeevwJGExSNj6rg+gr6Ic3rw86xhCfa/AInzq2OE=" # encrypted value of your token
+
 script: |
-    bash .ci/ci_check.sh
+    bash .ci/ci_check.sh && ./gradlew sonarqube
+
 
 after_success:
     - bash <(curl -s https://codecov.io/bash)
